@@ -5,17 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFAppTesting"
         mc:Ignorable="d"
-        Title="Lean Mean Painting Machine" Height="450" Width="800" Background="Black">
+        Title="Lean Mean Painting Machine" Height="450" Width="1009.6" Background="#FFE2DEDE">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="34*"/>
-            <ColumnDefinition Width="205*"/>
-            <ColumnDefinition Width="158*"/>
+            <ColumnDefinition Width="68*"/>
+            <ColumnDefinition Width="410*"/>
+            <ColumnDefinition Width="267*"/>
+            <ColumnDefinition Width="49*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="ClearButton" Content="Clear" HorizontalAlignment="Left" Height="19.2" VerticalAlignment="Top" Width="39.2" Click="Clear_Click"/>
-        <InkCanvas x:Name="InkCanvas" HorizontalAlignment="Left" Height="379" Margin="45,28,0,0" VerticalAlignment="Top" Width="732" Grid.ColumnSpan="3">
+        
+        <Button x:Name="ClearButton" Content="Clear" HorizontalAlignment="Left" Height="19" VerticalAlignment="Top" Width="39" Click="Clear_Click"/>
+        
+        <InkCanvas x:Name="InkCanvas" HorizontalAlignment="Left" Height="379" Margin="45,28,0,0" VerticalAlignment="Top" Width="732" Grid.ColumnSpan="4">
         </InkCanvas>
-        <Slider x:Name="BrushSizeSlider" HorizontalAlignment="Left" Margin="48,2,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="200" ValueChanged="BrushSizeSlider_ValueChanged"/>
+        <Slider x:Name="BrushSizeSlider" HorizontalAlignment="Left" Margin="48,2,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="200" ValueChanged="BrushSizeSlider_ValueChanged" Minimum="0.1"/>
 
     </Grid>
 </Window>
