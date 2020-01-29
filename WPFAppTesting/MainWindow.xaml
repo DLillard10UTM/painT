@@ -13,12 +13,17 @@
             <ColumnDefinition Width="267*"/>
             <ColumnDefinition Width="49*"/>
         </Grid.ColumnDefinitions>
-        
+
         <Button x:Name="ClearButton" Content="Clear" HorizontalAlignment="Left" Height="19" VerticalAlignment="Top" Width="39" Click="Clear_Click"/>
-        
+
         <InkCanvas x:Name="InkCanvas" HorizontalAlignment="Left" Height="379" Margin="45,28,0,0" VerticalAlignment="Top" Width="732" Grid.ColumnSpan="4">
         </InkCanvas>
+
         <Slider x:Name="BrushSizeSlider" HorizontalAlignment="Left" Margin="48,2,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="200" ValueChanged="BrushSizeSlider_ValueChanged" Minimum="0.1"/>
+
+        <Slider x:Name="RedColorSlider" HorizontalAlignment="Left" Margin="189,28,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="200" ValueChanged="BrushColorSlider_ValueChanged" Grid.Column="2" Background="Red" Maximum="255"/>
+        <Slider x:Name="GreenColorSlider" HorizontalAlignment="Left" Margin="189,51,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="200" ValueChanged="BrushColorSlider_ValueChanged" Grid.Column="2" Background="Lime" Maximum="255"/>
+        <Slider x:Name="BlueColorSlider" HorizontalAlignment="Left" Margin="189,74,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="200" ValueChanged="BrushColorSlider_ValueChanged" Grid.Column="2" Background="Blue" Maximum="255"/>
 
     </Grid>
 </Window>

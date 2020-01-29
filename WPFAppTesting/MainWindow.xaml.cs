@@ -36,7 +36,8 @@ namespace WPFAppTesting
         //Based on the slider value from 0 to 255, we change the color. Alpha is currently always set to max.
         private void BrushColorSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            InkCanvas.DefaultDrawingAttributes.Color = Color.FromArgb(255, Convert.ToByte(RedColorSlider.Value), Convert.ToByte(GreenColorSlider.Value), Convert.ToByte(BlueColorSlider.Value));
+            InkCanvas.DefaultDrawingAttributes.Color = Color.FromArgb(255, Convert.ToByte(RedColorSlider.Value), Convert.ToByte(GreenColorSlider.Value), 
+                Convert.ToByte(BlueColorSlider.Value));
         }
     }
 }
