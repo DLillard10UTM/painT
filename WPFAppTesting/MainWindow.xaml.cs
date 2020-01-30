@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+//Author: Danny Lillard
+//Date: 1/27/2020
 namespace WPFAppTesting
 {
     /// <summary>
@@ -30,7 +32,14 @@ namespace WPFAppTesting
         }
         private void BrushSizeSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            
+            InkCanvas.DefaultDrawingAttributes.Width = BrushSizeSlider.Value;
+            InkCanvas.DefaultDrawingAttributes.Height = BrushSizeSlider.Value;
+        }
+        //Based on the slider value from 0 to 255, we change the color. Alpha is currently always set to max.
+        private void BrushColorSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            InkCanvas.DefaultDrawingAttributes.Color = Color.FromArgb(255, Convert.ToByte(RedColorSlider.Value), Convert.ToByte(GreenColorSlider.Value),
+                Convert.ToByte(BlueColorSlider.Value));
         }
     }
 }
